@@ -96,14 +96,14 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 			let entry_point = '';
 
 			let platform = '';
-			if ( userAgent.indexOf('Mobile') != -1) { 
+			if ( userAgent.indexOf('Mobile') != -1) {
 				if ( userAgent.indexOf('iPhone') != -1 || userAgent.indexOf('iPad') != -1 ) {
 					platform = 'ios';
-				} else if ( userAgent.indexOf('Android') != -1 ) { 
+				} else if ( userAgent.indexOf('Android') != -1 ) {
 					platform = 'android';
 				}
 			} else {
-				platform = 'Web'; 
+				platform = 'Web';
 			}
 
 			let os = '';
@@ -114,13 +114,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 			switch(platform) {
 				case "android":
-					splitMatches = matches[0].split('; ');	
+					splitMatches = matches[0].split('; ');
 					os = splitMatches[1];
 					break;
 				case "ios":
 					let version = '';
 					splitMatches = matches[0].split('CPU ');
-					const splitStrings = splitMatches[1].split(' ');	
+					const splitStrings = splitMatches[1].split(' ');
 					if (userAgent.indexOf('iPhone') != -1) {
 						version = splitStrings[2].replace(/_/g, '.');
 					}
@@ -168,13 +168,13 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 						browser = 'unknown';
 					}
 
-					os = (userAgent.indexOf('Mobile') != -1) ? 
-						browser + ' Mobile ' + browserVersion : 
+					os = (userAgent.indexOf('Mobile') != -1) ?
+						browser + ' Mobile ' + browserVersion :
 						browser + ' ' + browserVersion;
 					break;
 			}
 
-			if(path === '/') entry_point = 'Home'; 
+			if(path === '/') entry_point = 'Home';
 			if(path === '/banking/') entry_point = 'Roarmoney';
 			if(path === '/investing/') entry_point = 'Investment Account';
 			if(path === '/credit-builder-app/') entry_point = 'Credit Builder Plus';
@@ -284,7 +284,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         let investmentButton = document.querySelector('.auto-investing__whitepaper__copy .button');
         if(investmentButton) {
           investmentButton.addEventListener('click', () => {
-            variant = (platform == 'Web') ? 'B1': 'B2'; 
+            variant = (platform == 'Web') ? 'B1': 'B2';
             analytics.track('acc_landing_page_click', {
               os: os,
               platform: platform,
@@ -299,7 +299,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 			if(entry_point == 'Home') {
         let variant = '';
         const fpDesktopModalCTA = document.querySelector('.front-page-modal__cta-container-inner__button');
-        const fpModalClose = document.querySelector('.front-page-modal.front-page-modal .front-page-modal__close-button'); 
+        const fpModalClose = document.querySelector('.front-page-modal.front-page-modal .front-page-modal__close-button');
         // Desktop - Modal Button Clicked
         fpDesktopModalCTA.addEventListener('click', () => {
           variant = (platform == 'Web') ? 'B1': 'B2';
@@ -344,7 +344,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
           let emailTop = document.querySelector('.waitlist-form--top .waitlist-form__input');
           let emailBottom = document.querySelector('.waitlist-form--bottom .waitlist-form__input');
 
-        //   
+        //
         $('.waitlist-form--top').submit(function(e){
           e.preventDefault(); // Prevent Default Submission
 
@@ -361,7 +361,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               });
           })
           .fail(function(){
-            alert('Form submission failed. Please try again.'); 
+            alert('Form submission failed. Please try again.');
           });
         });
 
@@ -381,7 +381,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
               });
           })
           .fail(function(){
-            alert('Form submission failed. Please try again.'); 
+            alert('Form submission failed. Please try again.');
           });
         });
 
@@ -395,11 +395,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5TPZ7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script type="text/javascript">
-  function handleHeaderButtonClick() { 
-    let theDesktopModal = document.querySelector('.front-page-modal'); 
+  function handleHeaderButtonClick() {
+    let theDesktopModal = document.querySelector('.front-page-modal');
     theDesktopModal.classList.add('front-page-modal--active');
     return false;
-  } 
+  }
 </script>
 <header class="header dark-header">
 <div class="ml-section header-nav main-header">
@@ -1087,9 +1087,11 @@ of 12.01.2023</span></p>
 <a class="button floating-qr-box__button" href="https://moneylion.onelink.me/3v37/zakqxl0a">Download the App</a>
 </div>
 </div>
-</div> 
-<style>
-#cookieApp { position: relative; z-index: 2001; }
+</div>
+<style>
+
+#cookieApp { position: relative; z-index: 2001; }
+
 </style>
 <footer class="footer">
 <section class="socials">
